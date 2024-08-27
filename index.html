@@ -1,0 +1,1876 @@
+<!doctype html>
+<html lang="vi">
+
+
+<!-- Mirrored from thuocme247.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Aug 2024 09:13:12 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <script>if (navigator.userAgent.match(/MSIE|Internet Explorer/i) || navigator.userAgent.match(/Trident\/7\..*?rv:11/i)) { var href = document.location.href; if (!href.match(/[?&]nowprocket/)) { if (href.indexOf("?") == -1) { if (href.indexOf("#") == -1) { document.location.href = href + "?nowprocket=1" } else { document.location.href = href.replace("#", "?nowprocket=1#") } } else { if (href.indexOf("#") == -1) { document.location.href = href + "&nowprocket=1" } else { document.location.href = href.replace("#", "&nowprocket=1#") } } } }</script>
+    <script>class RocketLazyLoadScripts { constructor(e) { this.triggerEvents = e, this.eventOptions = { passive: !0 }, this.userEventListener = this.triggerListener.bind(this), this.delayedScripts = { normal: [], async: [], defer: [] }, this.allJQueries = [] } _addUserInteractionListener(e) { this.triggerEvents.forEach((t => window.addEventListener(t, e.userEventListener, e.eventOptions))) } _removeUserInteractionListener(e) { this.triggerEvents.forEach((t => window.removeEventListener(t, e.userEventListener, e.eventOptions))) } triggerListener() { this._removeUserInteractionListener(this), "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", this._loadEverythingNow.bind(this)) : this._loadEverythingNow() } async _loadEverythingNow() { this._delayEventListeners(), this._delayJQueryReady(this), this._handleDocumentWrite(), this._registerAllDelayedScripts(), this._preloadAllScripts(), await this._loadScriptsFromList(this.delayedScripts.normal), await this._loadScriptsFromList(this.delayedScripts.defer), await this._loadScriptsFromList(this.delayedScripts.async), await this._triggerDOMContentLoaded(), await this._triggerWindowLoad(), window.dispatchEvent(new Event("rocket-allScriptsLoaded")) } _registerAllDelayedScripts() { document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e => { e.hasAttribute("src") ? e.hasAttribute("async") && !1 !== e.async ? this.delayedScripts.async.push(e) : e.hasAttribute("defer") && !1 !== e.defer || "module" === e.getAttribute("data-rocket-type") ? this.delayedScripts.defer.push(e) : this.delayedScripts.normal.push(e) : this.delayedScripts.normal.push(e) })) } async _transformScript(e) { return await this._requestAnimFrame(), new Promise((t => { const n = document.createElement("script"); let r;[...e.attributes].forEach((e => { let t = e.nodeName; "type" !== t && ("data-rocket-type" === t && (t = "type", r = e.nodeValue), n.setAttribute(t, e.nodeValue)) })), e.hasAttribute("src") ? (n.addEventListener("load", t), n.addEventListener("error", t)) : (n.text = e.text, t()), e.parentNode.replaceChild(n, e) })) } async _loadScriptsFromList(e) { const t = e.shift(); return t ? (await this._transformScript(t), this._loadScriptsFromList(e)) : Promise.resolve() } _preloadAllScripts() { var e = document.createDocumentFragment();[...this.delayedScripts.normal, ...this.delayedScripts.defer, ...this.delayedScripts.async].forEach((t => { const n = t.getAttribute("src"); if (n) { const t = document.createElement("link"); t.href = n, t.rel = "preload", t.as = "script", e.appendChild(t) } })), document.head.appendChild(e) } _delayEventListeners() { let e = {}; function t(t, n) { !function (t) { function n(n) { return e[t].eventsToRewrite.indexOf(n) >= 0 ? "rocket-" + n : n } e[t] || (e[t] = { originalFunctions: { add: t.addEventListener, remove: t.removeEventListener }, eventsToRewrite: [] }, t.addEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.add.apply(t, arguments) }, t.removeEventListener = function () { arguments[0] = n(arguments[0]), e[t].originalFunctions.remove.apply(t, arguments) }) }(t), e[t].eventsToRewrite.push(n) } function n(e, t) { let n = e[t]; Object.defineProperty(e, t, { get: () => n || function () { }, set(r) { e["rocket" + t] = n = r } }) } t(document, "DOMContentLoaded"), t(window, "DOMContentLoaded"), t(window, "load"), t(window, "pageshow"), t(document, "readystatechange"), n(document, "onreadystatechange"), n(window, "onload"), n(window, "onpageshow") } _delayJQueryReady(e) { let t = window.jQuery; Object.defineProperty(window, "jQuery", { get: () => t, set(n) { if (n && n.fn && !e.allJQueries.includes(n)) { n.fn.ready = n.fn.init.prototype.ready = function (t) { e.domReadyFired ? t.bind(document)(n) : document.addEventListener("rocket-DOMContentLoaded", (() => t.bind(document)(n))) }; const t = n.fn.on; n.fn.on = n.fn.init.prototype.on = function () { if (this[0] === window) { function e(e) { return e.split(" ").map((e => "load" === e || 0 === e.indexOf("load.") ? "rocket-jquery-load" : e)).join(" ") } "string" == typeof arguments[0] || arguments[0] instanceof String ? arguments[0] = e(arguments[0]) : "object" == typeof arguments[0] && Object.keys(arguments[0]).forEach((t => { delete Object.assign(arguments[0], { [e(t)]: arguments[0][t] })[t] })) } return t.apply(this, arguments), this }, e.allJQueries.push(n) } t = n } }) } async _triggerDOMContentLoaded() { this.domReadyFired = !0, await this._requestAnimFrame(), document.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._requestAnimFrame(), window.dispatchEvent(new Event("rocket-DOMContentLoaded")), await this._requestAnimFrame(), document.dispatchEvent(new Event("rocket-readystatechange")), await this._requestAnimFrame(), document.rocketonreadystatechange && document.rocketonreadystatechange() } async _triggerWindowLoad() { await this._requestAnimFrame(), window.dispatchEvent(new Event("rocket-load")), await this._requestAnimFrame(), window.rocketonload && window.rocketonload(), await this._requestAnimFrame(), this.allJQueries.forEach((e => e(window).trigger("rocket-jquery-load"))), window.dispatchEvent(new Event("rocket-pageshow")), await this._requestAnimFrame(), window.rocketonpageshow && window.rocketonpageshow() } _handleDocumentWrite() { const e = new Map; document.write = document.writeln = function (t) { const n = document.currentScript, r = document.createRange(), i = n.parentElement; let o = e.get(n); void 0 === o && (o = n.nextSibling, e.set(n, o)); const a = document.createDocumentFragment(); r.setStart(a, 0), a.appendChild(r.createContextualFragment(t)), i.insertBefore(a, o) } } async _requestAnimFrame() { return new Promise((e => requestAnimationFrame(e))) } static run() { const e = new RocketLazyLoadScripts(["keydown", "mousemove", "touchmove", "touchstart", "touchend", "wheel"]); e._addUserInteractionListener(e) } } RocketLazyLoadScripts.run();</script>
+    <meta name="google-site-verification" content="02txR09DGvamY4liFyhM2bCa96SWnIIpQ-5s6RVJWDw" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <title>Thuốc Mê 247 Chuyên Bán Thuốc Mê Chính Hãng Uy Tín Nhất</title>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&amp;display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+        media="print" onload="this.media='all'" /><noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&amp;display=swap" />
+    </noscript>
+    <link rel="stylesheet" href="wp-content/cache/min/1/e4e2ed629c17be88b3b2f670b42da66c.css" media="all"
+        data-minify="1" />
+    <style>
+        #wpadminbar #wp-admin-bar-p404_free_top_button .ab-icon:before {
+            content: "\f103";
+            color: red;
+            top: 2px;
+        }
+    </style>
+    <meta name='robots' content='max-image-preview:large' />
+
+    <!-- This site is optimized with the Yoast SEO Premium plugin v13.0 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description"
+        content="Thuốc Mê 247 được biết đến là &quot;Nhà Thuốc Chính Hãng&quot; chuyên cung cấp thuốc mê: thuốc mê dạng xịt, thuốc mê dạng nước, thuốc mê dạng bột cực mạnh giá rẻ." />
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="index.html" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Thuốc Mê 247 Chuyên Bán Thuốc Mê Chính Hãng Uy Tín Nhất" />
+    <meta property="og:description"
+        content="Thuốc Mê 247 được biết đến là &quot;Nhà Thuốc Chính Hãng&quot; chuyên cung cấp thuốc mê: thuốc mê dạng xịt, thuốc mê dạng nước, thuốc mê dạng bột cực mạnh giá rẻ." />
+    <meta property="og:url" content="https://thuocme247.com/" />
+    <meta property="og:site_name" content="Thuốc Mê 247" />
+    <meta property="og:image" content="https://thuocme247.com/wp-content/uploads/2022/11/logo-thuoc-me-247.png" />
+    <meta property="og:image:secure_url"
+        content="https://thuocme247.com/wp-content/uploads/2022/11/logo-thuoc-me-247.png" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description"
+        content="Thuốc Mê 247 được biết đến là &quot;Nhà Thuốc Chính Hãng&quot; chuyên cung cấp thuốc mê: thuốc mê dạng xịt, thuốc mê dạng nước, thuốc mê dạng bột cực mạnh giá rẻ." />
+    <meta name="twitter:title" content="Thuốc Mê 247 Chuyên Bán Thuốc Mê Chính Hãng Uy Tín Nhất" />
+    <meta name="twitter:site" content="@thuocme247" />
+    <meta name="twitter:image" content="https://thuocme247.com/wp-content/uploads/2022/11/logo-thuoc-me-247.png" />
+    <meta name="twitter:creator" content="@thuocme247" />
+    <meta name="google-site-verification" content="nFucHwcgMTbsH7iecSHj8ipiY2_dN9wW_TRU1doPBos" />
+    <!-- / Yoast SEO Premium plugin. -->
+
+    <link rel='dns-prefetch' href='http://fonts.gstatic.com/' />
+    <link rel='dns-prefetch' href='http://connect.facebook.net/' />
+    <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+    <link rel='dns-prefetch' href='http://www.google-analytics.com/' />
+    <link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+    <link rel="alternate" type="application/rss+xml" title="Dòng thông tin Thuốc Mê 247 &raquo;"
+        href="feed/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Thuốc Mê 247 &raquo;"
+        href="comments/feed/index.html" />
+
+
+
+    <style id='contact-form-7-inline-css' type='text/css'>
+        .wpcf7 .wpcf7-recaptcha iframe {
+            margin-bottom: 0;
+        }
+
+        .wpcf7 .wpcf7-recaptcha[data-align="center"]>div {
+            margin: 0 auto;
+        }
+
+        .wpcf7 .wpcf7-recaptcha[data-align="right"]>div {
+            margin: 0 0 0 auto;
+        }
+    </style>
+
+    <style id='rocket-lazyload-inline-css' type='text/css'>
+        .rll-youtube-player {
+            position: relative;
+            padding-bottom: 56.23%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .rll-youtube-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background: 0 0
+        }
+
+        .rll-youtube-player img {
+            bottom: 0;
+            display: block;
+            left: 0;
+            margin: auto;
+            max-width: 100%;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: none;
+            height: auto;
+            cursor: pointer;
+            -webkit-transition: .4s all;
+            -moz-transition: .4s all;
+            transition: .4s all
+        }
+
+        .rll-youtube-player img:hover {
+            -webkit-filter: brightness(75%)
+        }
+
+        .rll-youtube-player .play {
+            height: 72px;
+            width: 72px;
+            left: 50%;
+            top: 50%;
+            margin-left: -36px;
+            margin-top: -36px;
+            position: absolute;
+            background: url(wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat;
+            cursor: pointer
+        }
+    </style>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'
+        src='wp-includes/js/jquery/jquery.minaf6c.js?ver=3.6.0' id='jquery-core-js'></script>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'
+        src='wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+    <link rel="https://api.w.org/" href="wp-json/index.html" />
+    <link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/10.json" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+    <meta name="generator" content="WordPress 5.8.10" />
+    <link rel='shortlink' href='index.html' />
+    <link rel="alternate" type="application/json+oembed"
+        href="wp-json/oembed/1.0/embed5e4d.json?url=https%3A%2F%2Fthuocme247.com%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="wp-json/oembed/1.0/embedaa4b?url=https%3A%2F%2Fthuocme247.com%2F&amp;format=xml" />
+
+    <!-- Schema & Structured Data For WP v1.9.106 - -->
+    <script type="application/ld+json" class="saswp-schema-markup-output">
+[{"@context":"https://schema.org","@graph":[{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"TRANG CHỦ","url":"https://thuocme247.com/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"GIỚI THIỆU","url":"https://thuocme247.com/gioi-thieu/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"ĐỘI NGŨ","url":"https://thuocme247.com/doi-ngu/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"THUỐC MÊ","url":"https://thuocme247.com/product-category/thuoc-me/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"THUỐC MÊ DẠNG NƯỚC","url":"https://thuocme247.com/product-category/thuoc-me-dang-nuoc/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"THUỐC MÊ DẠNG XỊT","url":"https://thuocme247.com/product-category/thuoc-me-dang-xit/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"THUỐC MÊ DẠNG BỘT","url":"https://thuocme247.com/thuoc-me-dang-bot/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"TIN TỨC","url":"https://thuocme247.com/category/tin-tuc/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"TIN TỨC CÔNG TY","url":"https://thuocme247.com/tin-tuc-cong-ty/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"LIÊN HỆ","url":"https://thuocme247.com/lien-he/"},{"@context":"https://schema.org","@type":"SiteNavigationElement","@id":"https://thuocme247.com/#Menu Chính","name":"TUYỂN DỤNG","url":"https://thuocme247.com/tuyen-dung/"}]},
+
+{"@context":"https://schema.org","@type":"pharmacy","@id":"https://thuocme247.com/#pharmacy","url":"https://thuocme247.com","name":"Thuốc Mê 247","image":{"@type":"ImageObject","url":"https://thuocme247.com/wp-content/uploads/2022/11/logo-thuoc-me-247.png","width":"600","height":"600"},"description":"Thuốc Mê 247 được biết đến là \"Nhà Thuốc Chính Hãng\" chuyên cung cấp thuốc mê: thuốc mê dạng xịt, thuốc mê dạng nước, thuốc mê dạng bột cực mạnh giá rẻ.","address":{"streetAddress":"32 Đ. Tú Mỡ, Phường 7, Gò Vấp, Thành phố Hồ Chí Minh","addressLocality":"Gò Vấp","addressRegion":"Thành phố Hồ Chí Minh","postalCode":"70000"},"makesOffer":{"@type":"Offer","@id":"#service","itemOffered":{"@type":"Service","name":"Thuốc Mê","url":"https://thuocme247.com/","areaServed":[{"@type":"Place","name":"Việt Nam"}]}},"founder":[{"@type":"Person","name":"Trần Quang Hùng"}],"telephone":"0988160155","areaServed":[{"@type":"Place","name":"Việt Nam"}],"priceRange":"100000"},
+
+{"@context":"https://schema.org","@type":"MedicalOrganization","@id":"https://thuocme247.com#Organization","name":"Thuốc Mê 247","url":"","sameAs":["","","https://twitter.com/thuocme247",""],"legalName":"Thuốc Mê 247","logo":{"@type":"ImageObject","url":"https://thuocme247.com/wp-content/uploads/2022/11/thuocme247.png","width":"350","height":"133"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","telephone":"+84933675807","url":"https://thuocme247.com/lien-he/"}}]
+</script>
+
+    <link rel="icon" href="wp-content/uploads/2022/11/cropped-icon-thuocme247-32x32.png" sizes="32x32" />
+    <link rel="icon" href="wp-content/uploads/2022/11/cropped-icon-thuocme247-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="wp-content/uploads/2022/11/cropped-icon-thuocme247-180x180.png" />
+    <meta name="msapplication-TileImage"
+        content="https://thuocme247.com/wp-content/uploads/2022/11/cropped-icon-thuocme247-270x270.png" />
+    <style type="text/css" id="wp-custom-css">
+        .logo {
+            max-width: 200px;
+            max-height: 68px;
+        }
+
+        .products-slider {
+            padding-top: 80%;
+        }
+
+        .products-slider img {
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .list-cate-box .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .list-cate-box .row>.col,
+        .list-cate-box .row>[class*="col-"] {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    </style>
+    <noscript>
+        <style id="rocket-lazyload-nojs-css">
+            .rll-youtube-player,
+            [data-lazy-src] {
+                display: none !important;
+            }
+        </style>
+    </noscript>
+    <div id="fb-root"></div>
+    <script type="rocketlazyloadscript" async defer crossorigin="anonymous"
+        src="../connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0&appId=931026907858219&autoLogAppEvents=1"
+        nonce="aDLBMnis"></script>
+</head>
+
+<body class="home page-template page-template-home page-template-home-php page page-id-10 wp-custom-logo">
+    <style>
+        @media screen and (max-width: 767.5px) {
+            .header-main {
+                height: 84px;
+                overflow: hidden;
+            }
+        }
+    </style>
+    <header>
+        <div class="top-bar">
+            <div class="container d-flex align-items-center">
+                <div class="nav-top-bar">
+                    <ul>
+                        <li id="menu-item-2362"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2362"><a
+                                href="tel:0988160155">0988.160.155</a></li>
+                        <li id="menu-item-10569"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10569"><a
+                                href="cdn-cgi/l/email-protection.html#f88c908d979b959dcacccfb89f95999194d69b9795"><span
+                                    class="__cf_email__"
+                                    data-cfemail="c5b1adb0aaa6a8a0f7f1f285a2a8a4aca9eba6aaa8">[email&#160;protected]</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container d-flex justify-content-between flex-wrap align-items-center">
+                <div class="moblie-bar d-block d-md-block d-lg-none">
+                    <button class="icon-mobile toggle hc-nav-trigger hc-nav-1">
+                        <svg width="15px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                            class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="logo">
+                    <a href="index.html" title="Thuốc Mê Chính Hãng Cực Mạnh TPHCM"><img width="350" height="133" style="width: 80%;"
+                            src="wp-content/uploads/2022/11/logo-in-nguyen-phong_png.webp"></a>
+                </div>
+
+                <div class="main-menu">
+                    <ul>
+                        <li id="menu-item-13"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item menu-item-13">
+                            <a href="index.html" aria-current="page">TRANG CHỦ</a>
+                        </li>
+                        <li id="menu-item-314"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-314">
+                            <a href="gioi-thieu/index.html">GIỚI THIỆU</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-11104"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11104"><a
+                                        href="doi-ngu/index.html">ĐỘI NGŨ</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-11801"
+                            class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-11801">
+                            <a href="product-category/thuoc-me/index.html">THUỐC MÊ</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-11803"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-11803">
+                                    <a href="product-category/thuoc-me-dang-nuoc/index.html">THUỐC MÊ DẠNG NƯỚC</a>
+                                </li>
+                                <li id="menu-item-11804"
+                                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-11804">
+                                    <a href="product-category/thuoc-me-dang-xit/index.html">THUỐC MÊ DẠNG XỊT</a>
+                                </li>
+                                <li id="menu-item-12333"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12333"><a
+                                        href="thuoc-me-dang-bot/index.html">THUỐC MÊ DẠNG BỘT</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-2369"
+                            class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-2369">
+                            <a href="category/tin-tuc/index.html">TIN TỨC</a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-11111"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11111"><a
+                                        href="tin-tuc-cong-ty/index.html">TIN TỨC CÔNG TY</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-item-359"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-359"><a
+                                href="lien-he/index.html">LIÊN HỆ</a></li>
+                        <li id="menu-item-11097"
+                            class="menu-item menu-item-type-post_type_archive menu-item-object-tuyen_dung menu-item-11097">
+                            <a href="tuyen-dung/index.html">TUYỂN DỤNG</a>
+                        </li>
+                        <li>
+                            <button id="btn-search-hd">
+                                <svg width="15px" aria-hidden="true" focusable="false" data-prefix="fas"
+                                    data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="search-mb">
+                    <button id="btn-search-hd">
+                        <svg width="15px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search"
+                            class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom d-none d-md-none d-lg-block">
+            <div class="container d-none d-md-none d-lg-flex flex-wrap justify-content-center">
+
+            </div>
+        </div>
+    </header>
+    <main class="home-page">
+        <section class="first-sec-pages">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 d-none d-lg-block">
+                        <div class="list-cate-home">
+                            <div class="title-box">
+                                <p class="m-0">danh mục sản phẩm</p>
+                            </div>
+                            <div class="list-cate-content">
+                                <ul>
+                                    <li id="menu-item-11805"
+                                        class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-11805">
+                                        <a href="product-category/thuoc-me/index.html">THUỐC MÊ</a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-11807"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-11807">
+                                                <a href="product-category/thuoc-me-dang-nuoc/index.html">THUỐC MÊ DẠNG
+                                                    NƯỚC</a>
+                                            </li>
+                                            <li id="menu-item-11808"
+                                                class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-11808">
+                                                <a href="product-category/thuoc-me-dang-xit/index.html">THUỐC MÊ DẠNG
+                                                    XỊT</a>
+                                            </li>
+                                            <li id="menu-item-12332"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12332">
+                                                <a href="thuoc-me-dang-bot/index.html">THUỐC MÊ DẠNG BỘT</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+                        <div class="banner-box">
+                            <div class="banner">
+                                <div class="banner-box">
+                                    <div class="images-banner">
+                                        <picture>
+                                            <source media="(max-width:650px)"
+                                                data-lazy-srcset="https://thuocme247.com/wp-content/uploads/2022/11/banner-thuocme247-300x300.png">
+                                            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                                alt="🏥 THUỐC MÊ 247"
+                                                data-lazy-src="https://thuocme247.com/wp-content/uploads/2022/11/banner-thuocme247.png"><noscript><img
+                                                    src="wp-content/uploads/2022/11/banner-thuocme247.png"
+                                                    alt="🏥 THUỐC MÊ 247"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="box-text">
+                                        <p class="m-0">🏥 THUỐC MÊ 247</p>
+                                        <p>Nhà thuốc chính hãng chuyên cung cấp các sản phẩm: thuốc mê cực mạnh, chính
+                                            hãng, cao cấp và chất lượng tại TPHCM
+                                        </p>
+                                        <div class="see-more-box">
+                                            <a href="gioi-thieu/index.html">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="why-choose-us">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="images-ct">
+                            <img width="570" height="570"
+                                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20570%20570'%3E%3C/svg%3E"
+                                class="attachment-full size-full" alt=""
+                                data-lazy-srcset="https://thuocme247.com/wp-content/uploads/2022/11/thuoc-me247-baner.png 570w, https://thuocme247.com/wp-content/uploads/2022/11/thuoc-me247-baner-300x300.png 300w"
+                                data-lazy-sizes="(max-width: 570px) 100vw, 570px"
+                                data-lazy-src="https://thuocme247.com/wp-content/uploads/2022/11/thuoc-me247-baner.png" /><noscript><img
+                                    width="570" height="570" src="wp-content/uploads/2022/11/thuoc-me247-baner.png"
+                                    class="attachment-full size-full" alt=""
+                                    srcset="https://thuocme247.com/wp-content/uploads/2022/11/thuoc-me247-baner.png 570w, https://thuocme247.com/wp-content/uploads/2022/11/thuoc-me247-baner-300x300.png 300w"
+                                    sizes="(max-width: 570px) 100vw, 570px" /></noscript>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="choose-us-content">
+                            <div class="main-title first-main">
+                                <h1 class="title">
+                                    <p>
+                                        Thuốc Mê 247 </p>
+                                    <p>
+                                        Nhà Thuốc Chính Hãng Uy Tín </p>
+                                </h1>
+                            </div>
+
+                            <div class="the_content">
+                                <p>Thuốc Mê 247 chuyên cung cấp thuốc mê chính hãng, hiệu quả cực mạnh, an toàn 100%</p>
+                                <p>Hiện nay nhu cầu sử dụng thuốc mê đang là điều mà nhiều người đang tìm kiếm và cần sử
+                                    dụng hỗ trợ trong y học chữa bệnh.</p>
+                                <p>Nhà thuốc chúng tôi cam kết cung cấp cho khách hàng các sản phẩm thuốc mê chính hãng,
+                                    rõ ràng về thông tin nguồn gốc, xuất xứ cho từng sản phẩm.</p>
+                            </div>
+                            <div class="see">
+                                <a href="gioi-thieu/index.html">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="field-of-action">
+            <div class="container">
+                <div class="main-title text-center">
+                    <p class="title mb-3">
+                        <span>
+                            Lĩnh Vực </span>
+                        <span>
+                            Hoạt Động </span>
+                    </p>
+                </div>
+
+                <div class="the_content">
+                    <p>Thuốc Mê 247 Chuyên cung cấp các sản phẩm thuốc mê chính hãng: <span style="color: #333333;"><a
+                                style="color: #333333;" href="thuoc-me-dang-xit/index.html">thuốc mê dạng xịt</a>, <a
+                                style="color: #333333;" href="thuoc-me-dang-nuoc/index.html">thuốc mê dạng nước</a>, <a
+                                style="color: #333333;" href="thuoc-me-dang-bot/index.html">thuốc mê dạng
+                                bột</a>,</span>&#8230; Chúng tôi cam kết sẽ mang lại cho bạn những sản phẩm tốt nhất
+                        đúng với phương châm là &#8220;<span style="color: #ff0000;">Nhà Thuốc Chính Hãng</span>&#8220;,
+                        sẽ mang lại cho bạn những sản phẩm chính hãng, hiệu quả cao giá rẻ.</p>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="blog-box normal-box">
+                            <div class="images-box">
+                                <a href="product-category/thuoc-me-dang-xit/index.html">
+                                    <img width="380" height="275"
+                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20380%20275'%3E%3C/svg%3E"
+                                        class="attachment-full size-full" alt=""
+                                        data-lazy-src="wp-content/uploads/2022/12/anhtrangchu3.png" /><noscript><img
+                                            width="380" height="275" src="wp-content/uploads/2022/12/anhtrangchu3.png"
+                                            class="attachment-full size-full" alt="" /></noscript> </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="product-category/thuoc-me-dang-xit/index.html">Thuốc Mê Dạng Xịt</a>
+                                </div>
+
+                                <div class="desc">
+                                    <span>Thuốc mê dạng xịt hay còn được gọi là thuốc mê thể khí, thuốc mê bay hơi,… Đây
+                                        là một trong những loại thuốc mê ngủ được sử dụng phổ biến hiện nay. Sản phẩm
+                                        này được bào chế ở dạng lỏng, dùng bằng cách xịt hơi – khí.</span>
+                                </div>
+
+                                <div class="btn-see-more">
+                                    <a href="product-category/thuoc-me-dang-xit/index.html">
+                                        xem chi tiết </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="blog-box normal-box">
+                            <div class="images-box">
+                                <a href="thuoc-me/index.html">
+                                    <img width="380" height="275"
+                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20380%20275'%3E%3C/svg%3E"
+                                        class="attachment-full size-full" alt=""
+                                        data-lazy-src="wp-content/uploads/2022/12/anhtrangchu1.png" /><noscript><img
+                                            width="380" height="275" src="wp-content/uploads/2022/12/anhtrangchu1.png"
+                                            class="attachment-full size-full" alt="" /></noscript> </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="thuoc-me/index.html">Thuốc Mê</a>
+                                </div>
+
+                                <div class="desc">
+                                    <span>Thuốc mê là một loại thuốc khiến ức chế hệ thần kinh trung ương, làm bệnh nhân
+                                        mất ý thức, mất cảm giác và phản xạ tạm thời. Các loại thuốc mê thường được sử
+                                        dụng để gây mê cho bệnh nhân trước phẫu thuật, hoặc dùng cho các trường hợp cai
+                                        nghiện.</span>
+                                </div>
+
+                                <div class="btn-see-more">
+                                    <a href="thuoc-me/index.html">
+                                        xem chi tiết </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                        <div class="blog-box normal-box">
+                            <div class="images-box">
+                                <a href="product-category/thuoc-me-dang-nuoc/index.html">
+                                    <img width="380" height="275"
+                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20380%20275'%3E%3C/svg%3E"
+                                        class="attachment-full size-full" alt=""
+                                        data-lazy-src="wp-content/uploads/2022/12/anhtrangchu2.png" /><noscript><img
+                                            width="380" height="275" src="wp-content/uploads/2022/12/anhtrangchu2.png"
+                                            class="attachment-full size-full" alt="" /></noscript> </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="product-category/thuoc-me-dang-nuoc/index.html">Thuốc Mê Dạng Nước</a>
+                                </div>
+
+                                <div class="desc">
+                                    <span>Thuốc mê dạng nước là loại thuốc mê được bào chế dưới dạng dung dịch lỏng, có
+                                        tác dụng an thần, ức chế hệ thần kinh trung ương. Khiến người dùng mất đi
+                                        nhận thức và rơi vào trạng thái ngủ sâu nhanh chóng.</span>
+                                </div>
+
+                                <div class="btn-see-more">
+                                    <a href="product-category/thuoc-me-dang-nuoc/index.html">
+                                        xem chi tiết </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-hot">
+            <div class="container">
+                <div class="main-title text-center">
+                    <p class="title mb-3">
+                        <span>
+                            Sản Phẩm </span>
+                        <span>
+                            Nổi Bật </span>
+                    </p>
+                </div>
+
+                <div class="the_content">
+                    <p>Sản phẩm thuốc của thuốc mê 247 là những sản phẩm bệnh viện cung cấp. Với chất lượng và giá thành
+                        tốt nhất sẽ mang lại sự hài lòng cho khách hàng, đảm bảo an toàn 100%</p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-thoi-mien-dang-xit-scopolamine-0-4mg/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Thôi Miên Dạng Xịt SCOPOLAMINE 0.4mg"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-thoi-mien-dang-xit-scopolanime-compressed-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-thoi-mien-dang-xit-scopolanime-compressed-300x300.jpg"
+                                            alt="Thuốc Thôi Miên Dạng Xịt SCOPOLAMINE 0.4mg"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-thoi-mien-dang-xit-scopolamine-0-4mg/index.html">Thuốc Thôi
+                                        Miên Dạng Xịt SCOPOLAMINE 0.4mg</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.900.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    1.300.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-thoi-mien-dang-nuoc-scopolamine-04mg/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Thôi Miên Dạng Nước SCOPOLAMINE 0.4mg"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-thoi-mien-dang-nuoc-scopolamine-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-thoi-mien-dang-nuoc-scopolamine-300x300.jpg"
+                                            alt="Thuốc Thôi Miên Dạng Nước SCOPOLAMINE 0.4mg"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-thoi-mien-dang-nuoc-scopolamine-04mg/index.html">Thuốc Thôi
+                                        Miên Dạng Nước SCOPOLAMINE 0.4mg</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>3.000.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    2.500.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-dang-nuoc-ketamine-hcl/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc mê dạng nước KETAMINE HCL"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-ketamin-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-ketamin-300x300.jpg"
+                                            alt="Thuốc mê dạng nước KETAMINE HCL"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-dang-nuoc-ketamine-hcl/index.html">Thuốc mê dạng nước
+                                        KETAMINE HCL</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>5.500.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    1.700.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-dang-nuoc-rescue-night/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê Dạng Nước RESCUE NIGHT Giá Tốt"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-rescue-sleep-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-rescue-sleep-300x300.jpg"
+                                            alt="Thuốc Mê Dạng Nước RESCUE NIGHT Giá Tốt"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-dang-nuoc-rescue-night/index.html">Thuốc Mê Dạng Nước
+                                        RESCUE NIGHT Giá Tốt</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>2.000.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    1.600.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-dang-nuoc-sevoflurane/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê Dạng Nước SEVOFLURANE"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-sevoflurane-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-sevoflurane-300x300.jpg"
+                                            alt="Thuốc Mê Dạng Nước SEVOFLURANE"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-dang-nuoc-sevoflurane/index.html">Thuốc Mê Dạng Nước
+                                        SEVOFLURANE</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>3.000.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    2.500.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-dang-xit-forane/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê Dạng Xịt FORANE"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-forane-dang-xit-300x300.png"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-forane-dang-xit-300x300.png"
+                                            alt="Thuốc Mê Dạng Xịt FORANE"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-dang-xit-forane/index.html">Thuốc Mê Dạng Xịt FORANE</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.200.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    800.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-dang-xit-spray-melatonine-phap/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc mê dạng xịt SPRAY MELATONINE Pháp"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-xit-spray-melatonine-1-compressed-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-xit-spray-melatonine-1-compressed-300x300.jpg"
+                                            alt="Thuốc mê dạng xịt SPRAY MELATONINE Pháp"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-dang-xit-spray-melatonine-phap/index.html">Thuốc mê dạng
+                                        xịt SPRAY MELATONINE Pháp</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>2.800.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    2.500.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-dang-xit-spray-nsleep/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê Dạng Xịt Spray N’Sleep Chính Hãng Hiệu Quả Mạnh"
+                                        data-lazy-src="wp-content/uploads/2022/12/thuoc-me-spray-nsleep-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/12/thuoc-me-spray-nsleep-300x300.jpg"
+                                            alt="Thuốc Mê Dạng Xịt Spray N’Sleep Chính Hãng Hiệu Quả Mạnh"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-dang-xit-spray-nsleep/index.html">Thuốc Mê Dạng Xịt Spray
+                                        N’Sleep Chính Hãng Hiệu Quả Mạnh</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>2.500.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    2.200.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-dang-xit-viga-sleep/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê Dạng Xịt VIGA SLEEP"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-xit-viga-sleep-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-xit-viga-sleep-300x300.jpg"
+                                            alt="Thuốc Mê Dạng Xịt VIGA SLEEP"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-dang-xit-viga-sleep/index.html">Thuốc Mê Dạng Xịt VIGA
+                                        SLEEP</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.000.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    850.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-diazepam-dang-nuoc/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê DIAZEPAM Dạng Nước Cực Mạnh"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-diazepam-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-diazepam-300x300.jpg"
+                                            alt="Thuốc Mê DIAZEPAM Dạng Nước Cực Mạnh"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-diazepam-dang-nuoc/index.html">Thuốc Mê DIAZEPAM Dạng
+                                        Nước Cực Mạnh</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.800.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    1.400.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-ete-nanoly-dang-xit/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê ETE NANOLY Dạng Xịt"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-xit-ete-nafany-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-xit-ete-nafany-300x300.jpg"
+                                            alt="Thuốc Mê ETE NANOLY Dạng Xịt"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-ete-nanoly-dang-xit/index.html">Thuốc Mê ETE NANOLY Dạng
+                                        Xịt</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.200.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    900.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-fly-sleep-dang-nuoc/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê Fly Sleep Dạng Nước Không Màu"
+                                        data-lazy-src="wp-content/uploads/2022/12/thuoc-me-fly-sleep-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/12/thuoc-me-fly-sleep-300x300.jpg"
+                                            alt="Thuốc Mê Fly Sleep Dạng Nước Không Màu"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-fly-sleep-dang-nuoc/index.html">Thuốc Mê Fly Sleep Dạng
+                                        Nước Không Màu</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.000.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    500.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-ghb/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê GHB Cao Cấp Chính Hãng"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-ghb-heaven-sleep-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-ghb-heaven-sleep-300x300.jpg"
+                                            alt="Thuốc Mê GHB Cao Cấp Chính Hãng"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-ghb/index.html">Thuốc Mê GHB Cao Cấp Chính Hãng</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.000.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    750.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-have-fun/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê Have Fun Cao Cấp Chính Hãng"
+                                        data-lazy-src="wp-content/uploads/2022/12/thuoc-me-have-fun-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/12/thuoc-me-have-fun-300x300.jpg"
+                                            alt="Thuốc Mê Have Fun Cao Cấp Chính Hãng"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-have-fun/index.html">Thuốc Mê Have Fun Cao Cấp Chính
+                                        Hãng</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.600.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    1.200.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-ketamine-hcl-dang-xit/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê KETAMINE HCL Dạng Xịt"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-xit-ketamine-hcl-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-xit-ketamine-hcl-300x300.jpg"
+                                            alt="Thuốc Mê KETAMINE HCL Dạng Xịt"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-ketamine-hcl-dang-xit/index.html">Thuốc Mê KETAMINE HCL
+                                        Dạng Xịt</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>2.000.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    1.800.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-dang-nuoc-ghb-red/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê Dạng Nước GHB RED"
+                                        data-lazy-src="wp-content/uploads/2022/11/ghb-red-300x300.png"><noscript><img
+                                            src="wp-content/uploads/2022/11/ghb-red-300x300.png"
+                                            alt="Thuốc Mê Dạng Nước GHB RED"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-dang-nuoc-ghb-red/index.html">Thuốc Mê Dạng Nước GHB
+                                        RED</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.600.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    1.100.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-masui-yaku-nhat-ban/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê MASUI YAKU Nhật Bản Dạng Nước"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-masui-yaku-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-nuoc-masui-yaku-300x300.jpg"
+                                            alt="Thuốc Mê MASUI YAKU Nhật Bản Dạng Nước"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-masui-yaku-nhat-ban/index.html">Thuốc Mê MASUI YAKU Nhật
+                                        Bản Dạng Nước</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>1.000.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    390.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+                        <div class="product-box">
+                            <div class="images-box">
+                                <a href="san-pham/thuoc-me-sleep-spray-dang-xit/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc mê SLEEP SPRAY Dạng Xịt"
+                                        data-lazy-src="wp-content/uploads/2022/11/thuoc-me-dang-xit-sleep-spray-300x300.jpg"><noscript><img
+                                            src="wp-content/uploads/2022/11/thuoc-me-dang-xit-sleep-spray-300x300.jpg"
+                                            alt="Thuốc mê SLEEP SPRAY Dạng Xịt"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="san-pham/thuoc-me-sleep-spray-dang-xit/index.html">Thuốc mê SLEEP SPRAY
+                                        Dạng Xịt</a>
+                                </div>
+
+                                <div class="price-product">
+                                    <span class="price">
+                                        <del>
+                                            <span class="woocommerce-Price-amount amount"><bdi>2.000.000Đ</bdi></span>
+                                        </del>
+                                        <ins>
+                                            <span class="woocommerce-Price-amount amount"><bdi>
+                                                    1.400.000Đ </bdi></span>
+                                        </ins>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-seo">
+                    <div class="seo-box the_content">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="client-talk">
+            <div class="container">
+                <div class="main-title text-center">
+                    <p class="title mb-3">
+                        <span>
+                            Khách Hàng Nói Về </span>
+                        <span>
+                            Thuốc Mê 247 </span>
+                    </p>
+                </div>
+
+                <div class="the_content">
+                    <p>Đánh giá của khách hàng về Thuốc Mê 247. Họ nói gì về chúng tôi sau khi sử dụng dịch vụ?</p>
+                </div>
+                <div class="client-t-box">
+                    <div class="row">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="media">
+                                <div class="images-box mr-3">
+                                    <img width="500" height="500"
+                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+                                        class="attachment-full size-full" alt=""
+                                        data-lazy-srcset="https://thuocme247.com/wp-content/uploads/2022/12/nguyen-thi-thuy-lieu-compressed.jpg 500w, https://thuocme247.com/wp-content/uploads/2022/12/nguyen-thi-thuy-lieu-compressed-300x300.jpg 300w"
+                                        data-lazy-sizes="(max-width: 500px) 100vw, 500px"
+                                        data-lazy-src="wp-content/uploads/2022/12/nguyen-thi-thuy-lieu-compressed.jpg" /><noscript><img
+                                            width="500" height="500"
+                                            src="wp-content/uploads/2022/12/nguyen-thi-thuy-lieu-compressed.jpg"
+                                            class="attachment-full size-full" alt=""
+                                            srcset="https://thuocme247.com/wp-content/uploads/2022/12/nguyen-thi-thuy-lieu-compressed.jpg 500w, https://thuocme247.com/wp-content/uploads/2022/12/nguyen-thi-thuy-lieu-compressed-300x300.jpg 300w"
+                                            sizes="(max-width: 500px) 100vw, 500px" /></noscript>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="desc">
+                                        <span class="mt-0">Sản phẩm tốt chất lượng, tôi làm bên nha khoa cần cho khách
+                                            sử dụng khi nhổ răng khôn. sài tốt, sẽ ủng hộ cửa hàng</span>
+                                    </div>
+
+                                    <div class="authour">
+                                        <p class="m-0">
+                                            Nguyễn Thị Thuý Liễu </p class="m-0">
+                                        <p class="m-0">Bác Sĩ Nha Khoa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <div class="media">
+                                <div class="images-box mr-3">
+                                    <img width="500" height="500"
+                                        src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20500'%3E%3C/svg%3E"
+                                        class="attachment-full size-full" alt=""
+                                        data-lazy-srcset="https://thuocme247.com/wp-content/uploads/2022/12/tran-quang-dung-compressed.jpg 500w, https://thuocme247.com/wp-content/uploads/2022/12/tran-quang-dung-compressed-300x300.jpg 300w"
+                                        data-lazy-sizes="(max-width: 500px) 100vw, 500px"
+                                        data-lazy-src="wp-content/uploads/2022/12/tran-quang-dung-compressed.jpg" /><noscript><img
+                                            width="500" height="500"
+                                            src="wp-content/uploads/2022/12/tran-quang-dung-compressed.jpg"
+                                            class="attachment-full size-full" alt=""
+                                            srcset="https://thuocme247.com/wp-content/uploads/2022/12/tran-quang-dung-compressed.jpg 500w, https://thuocme247.com/wp-content/uploads/2022/12/tran-quang-dung-compressed-300x300.jpg 300w"
+                                            sizes="(max-width: 500px) 100vw, 500px" /></noscript>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="desc">
+                                        <span class="mt-0">Làm bên xăm nhiều khách không chịu được đau nên cần sử dụng
+                                            thuốc mê mạnh để khách ngủ xăm cho dễ. Sản phẩm nhà thuốc rất tốt sẽ còn ủng
+                                            hộ.</span>
+                                    </div>
+
+                                    <div class="authour">
+                                        <p class="m-0">
+                                            Trần Quang Dũng </p class="m-0">
+                                        <p class="m-0">Thợ Xăm Mình</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news-blog-list mb-5">
+            <div class="container">
+                <div class="main-title text-center">
+                    <p class="title mb-3">
+                        <span>
+                            Tin Tức </span>
+                        <span>
+                            Mới </span>
+                    </p>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="blog-box single-desc">
+                            <div class="box-images">
+                                <a href="mua-thuoc-me-o-hue/index.html">
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                        alt="Thuốc Mê 247 địa chỉ cung cấp thuốc mê ở Huế chất lượng nhất"
+                                        data-lazy-src="wp-content/uploads/2023/02/mua-thuoc-me-o-hue-2-1.jpg"><noscript><img
+                                            src="wp-content/uploads/2023/02/mua-thuoc-me-o-hue-2-1.jpg"
+                                            alt="Thuốc Mê 247 địa chỉ cung cấp thuốc mê ở Huế chất lượng nhất"></noscript>
+                                </a>
+                            </div>
+
+                            <div class="box-text">
+                                <div class="title">
+                                    <a href="mua-thuoc-me-o-hue/index.html">Thuốc Mê 247 địa chỉ cung cấp thuốc mê ở Huế
+                                        chất lượng nhất</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="verical-list">
+                            <div class="blog-box vertical-blogs no-border-bt equa-height">
+                                <div class="box-images">
+                                    <a href="thuoc-me-hai-phong/index.html">
+                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                            alt="Top 4 địa chỉ bán thuốc mê tại Hải Phòng tốt nhất hiện nay"
+                                            data-lazy-src="wp-content/uploads/2023/02/mua-thuoc-me-dang-dot-3-1-300x300.jpg"><noscript><img
+                                                src="wp-content/uploads/2023/02/mua-thuoc-me-dang-dot-3-1-300x300.jpg"
+                                                alt="Top 4 địa chỉ bán thuốc mê tại Hải Phòng tốt nhất hiện nay"></noscript>
+                                    </a>
+                                </div>
+
+                                <div class="box-text">
+                                    <div class="title">
+                                        <a href="thuoc-me-hai-phong/index.html">Top 4 địa chỉ bán thuốc mê tại Hải Phòng
+                                            tốt nhất hiện nay</a>
+                                    </div>
+
+                                    <div class="desc">
+                                        <span>Thuốc mê ngủ với nhiều công dụng, hữu ích cho sức khỏe ngày càng được
+                                            nhiều khách hàng tìm mua, sử dụng. Vậy thuốc mê Hải Phòng có thể...</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-box vertical-blogs no-border-bt equa-height">
+                                <div class="box-images">
+                                    <a href="thuoc-me-dung-trong-phau-thuat/index.html">
+                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                            alt="Những Điều Cần Biết Về Thuốc Mê Dùng Trong Phẫu Thuật"
+                                            data-lazy-src="wp-content/uploads/2023/02/di-ung-thuoc-5-300x300.jpg"><noscript><img
+                                                src="wp-content/uploads/2023/02/di-ung-thuoc-5-300x300.jpg"
+                                                alt="Những Điều Cần Biết Về Thuốc Mê Dùng Trong Phẫu Thuật"></noscript>
+                                    </a>
+                                </div>
+
+                                <div class="box-text">
+                                    <div class="title">
+                                        <a href="thuoc-me-dung-trong-phau-thuat/index.html">Những Điều Cần Biết Về Thuốc
+                                            Mê Dùng Trong Phẫu Thuật</a>
+                                    </div>
+
+                                    <div class="desc">
+                                        <span>Những loại thuốc nào được sử dụng gây mê khi phẫu thuật? Thuốc mê dùng
+                                            trong phẫu thuật có an toàn không? Tác dụng phụ nguy hiểm nào cần...</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-box vertical-blogs no-border-bt equa-height">
+                                <div class="box-images">
+                                    <a href="dieu-che-thuoc-me-tu-thao-moc/index.html">
+                                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                                            alt="[Chia Sẻ] Cách Điều Chế Thuốc Mê Từ Thảo Mộc Hiệu Quả Nhất"
+                                            data-lazy-src="wp-content/uploads/2023/02/dieu-che-thuoc-me-tu-thao-moc-2-300x300.jpg"><noscript><img
+                                                src="wp-content/uploads/2023/02/dieu-che-thuoc-me-tu-thao-moc-2-300x300.jpg"
+                                                alt="[Chia Sẻ] Cách Điều Chế Thuốc Mê Từ Thảo Mộc Hiệu Quả Nhất"></noscript>
+                                    </a>
+                                </div>
+
+                                <div class="box-text">
+                                    <div class="title">
+                                        <a href="dieu-che-thuoc-me-tu-thao-moc/index.html">[Chia Sẻ] Cách Điều Chế Thuốc
+                                            Mê Từ Thảo Mộc Hiệu Quả Nhất</a>
+                                    </div>
+
+                                    <div class="desc">
+                                        <span>Có thể điều chế thuốc mê từ thảo mộc được hay không? Có những cách điều
+                                            chế nào đơn giản, hiệu quả, có thể áp dụng ngay tại nhà?...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+
+
+        <section class="resgis-poly">
+            <div class="container">
+                <div class="row no-gutters align-items-center">
+                    <div class="col-12 col-sm-12 col-md-7 col-lg-9">
+                        <div class="resgis-poly-box">
+                            <div class="title">
+                                <div class="media">
+                                    <div class="icon mr-3">
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <p class="m-0">Đăng Ký nhận tin</p>
+                                        <p>Đăng ký để nhận thông tin khuyến mãi</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-box">
+                                <div role="form" class="wpcf7" id="wpcf7-f825-o1" lang="vi" dir="ltr">
+                                    <div class="screen-reader-response">
+                                        <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                        <ul></ul>
+                                    </div>
+                                    <form action="https://thuocme247.com/#wpcf7-f825-o1" method="post"
+                                        class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                                        <div style="display: none;">
+                                            <input type="hidden" name="_wpcf7" value="825" />
+                                            <input type="hidden" name="_wpcf7_version" value="5.5.6.1" />
+                                            <input type="hidden" name="_wpcf7_locale" value="vi" />
+                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f825-o1" />
+                                            <input type="hidden" name="_wpcf7_container_post" value="0" />
+                                            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                                            <input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+                                        </div>
+                                        <span class="wpcf7-form-control-wrap tel-546"><input type="tel" name="tel-546"
+                                                value="" size="40"
+                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
+                                                aria-required="true" aria-invalid="false"
+                                                placeholder="nhập số điện thoại của bạn" /></span>
+                                        <button type="submit" class="wpcf7-submit wpcf7-form-control">Đăng ký</button>
+                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-3">
+                        <div class="follow-icon">
+                            <ul>
+                                <li><a href="" target="_blank" rel="nofollow"><svg
+                                            width="12px" aria-hidden="true" focusable="false" data-prefix="fab"
+                                            data-icon="facebook-f" class="svg-inline--fa fa-facebook-f fa-w-10"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                            <path fill="currentColor"
+                                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                            </path>
+                                        </svg></a></li>
+                                <li><a href="" target="_blank" rel="nofollow"><svg
+                                            width="12px" aria-hidden="true" focusable="false" data-prefix="fab"
+                                            data-icon="pinterest" class="svg-inline--fa fa-pinterest fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                            <path fill="currentColor"
+                                                d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z">
+                                            </path>
+                                        </svg></a></li>
+                                <li><a href="" target="_blank" rel="nofollow"><svg
+                                            width="12px" aria-hidden="true" focusable="false" data-prefix="fab"
+                                            data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                            </path>
+                                        </svg></a></li>
+                                <li><a href="" target="_blank" rel="nofollow"><svg
+                                            width="12px" aria-hidden="true" focusable="false" data-prefix="fab"
+                                            data-icon="youtube" class="svg-inline--fa fa-youtube fa-w-18" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <path fill="currentColor"
+                                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                            </path>
+                                        </svg></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-ft">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="title-ft">
+                            <p>Thuốc Mê 247</p>
+                        </div>
+                        <div class="the_content">
+                            <p>Thuốc Mê 247 chuyên cung cấp sản phẩm thuốc mê chính hãng uy tín nhất tại tphcm. Với
+                                nhiều năm kinh nghiệm trong lĩnh vực mua bán sản phẩm dược chúng tôi sẽ mang lại cho
+                                khách hàng những sản phẩm chất lượng và tốt nhất cho sức khoẻ</p>
+                        </div>
+                        <div class="footer-contact">
+                            <ul>
+                                <li>
+                                    <p class="mb-2">
+                                        <svg width="10px" aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12"
+                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <path fill="currentColor"
+                                                d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                                            </path>
+                                        </svg> <span>32 Đ. Tú Mỡ, Phường 7, Gò Vấp, Thành phố Hồ Chí Minh</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="mb-2">
+                                        <svg width="10px" aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                                            </path>
+                                        </svg> <span><a
+                                                href="cdn-cgi/l/email-protection.html#394d514c565a545c0b0d0e795e54585055175a5654"><span
+                                                    class="__cf_email__"
+                                                    data-cfemail="1a6e726f7579777f282e2d5a7d777b737634797577">[email&#160;protected]</span></a></span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="mb-2">
+                                        <svg width="10px" aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="phone-alt" class="svg-inline--fa fa-phone-alt fa-w-16" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z">
+                                            </path>
+                                        </svg> <span><a href="tel:0988160155">0988160155</a></span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 cus-pd">
+                        <div class="title-ft">
+                            <p>THÔNG TIN CỬA HÀNG</p>
+                        </div>
+                        <div class="navi-ft">
+                            <ul>
+                                <li>
+                                    <a href="chinh-sach-bao-mat-thong-tin/index.html">Chính Sách Bảo Mật Thông Tin</a>
+                                </li>
+                                <li>
+                                    <a href="chinh-sach-bao-hanh/index.html">Chính Sách Bảo Hành</a>
+                                </li>
+                                <li>
+                                    <a href="dieu-khoan-su-dung/index.html">Điều Khoản Sử Dụng</a>
+                                </li>
+                                <li>
+                                    <a href="chinh-sach-giao-hang/index.html">Chính Sách Giao Hàng</a>
+                                </li>
+                                <li>
+                                    <a href="thong-tin-thanh-toan/index.html">Thông Tin Thanh Toán</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="title-ft">
+                            <p>LIÊN HỆ</p>
+                        </div>
+                        <div class="fan-page-box">
+                            <div class="fb-page" data-href="" data-tabs="timeline"
+                                data-width="" data-height="50" data-small-header="false"
+                                data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="" class="fb-xfbml-parse-ignore"><a
+                                        href="">Thuốc Mê 247</a></blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="end-ft">
+                <span>© Bản quyền thuộc về Thuốc Mê 247</span>
+            </div>
+        </section>
+    </footer>
+    <div class="opacity_menu">
+    </div>
+    <div class="sidenav menu_mobile d-block d-xl-none" id="mySidenav">
+        <div class="logo p-4 mb-4 text-center bg-white">
+            <a href="index.html" title="Thuốc Mê Chính Hãng Cực Mạnh TPHCM"><img width="350" height="133"
+                    src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20350%20133'%3E%3C/svg%3E"
+                    data-lazy-src="wp-content/uploads/2022/11/thuocme247.png"><noscript><img width="350" height="133"
+                        src="wp-content/uploads/2022/11/thuocme247.png"></noscript></a>
+        </div>
+        <nav id="main-nav" class="p-3">
+            <ul>
+                <li
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-10 current_page_item menu-item-13">
+                    <a href="index.html" aria-current="page">TRANG CHỦ</a>
+                </li>
+                <li
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-314">
+                    <a href="gioi-thieu/index.html">GIỚI THIỆU</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11104"><a
+                                href="doi-ngu/index.html">ĐỘI NGŨ</a></li>
+                    </ul>
+                </li>
+                <li
+                    class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-11801">
+                    <a href="product-category/thuoc-me/index.html">THUỐC MÊ</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-11803"><a
+                                href="product-category/thuoc-me-dang-nuoc/index.html">THUỐC MÊ DẠNG NƯỚC</a></li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-11804"><a
+                                href="product-category/thuoc-me-dang-xit/index.html">THUỐC MÊ DẠNG XỊT</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12333"><a
+                                href="thuoc-me-dang-bot/index.html">THUỐC MÊ DẠNG BỘT</a></li>
+                    </ul>
+                </li>
+                <li
+                    class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-2369">
+                    <a href="category/tin-tuc/index.html">TIN TỨC</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11111"><a
+                                href="tin-tuc-cong-ty/index.html">TIN TỨC CÔNG TY</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-359"><a
+                        href="lien-he/index.html">LIÊN HỆ</a></li>
+                <li class="menu-item menu-item-type-post_type_archive menu-item-object-tuyen_dung menu-item-11097"><a
+                        href="tuyen-dung/index.html">TUYỂN DỤNG</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="call-zalo-mb d-flex d-md-none">
+        <a target="_blank" rel="nofollow" href="tel:0988160155" class="call-hot-line">
+            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                alt="" data-lazy-src="wp-content/themes/ws247/assets/images/icon1.png"><noscript><img
+                    src="wp-content/themes/ws247/assets/images/icon1.png" alt=""></noscript>
+            <span>hotline</span>
+        </a>
+
+        <a target="_blank" rel="nofollow" href="https://m.me/thuocme247" class="mess">
+            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                alt="" data-lazy-src="wp-content/themes/ws247/assets/images/icon2.png"><noscript><img
+                    src="wp-content/themes/ws247/assets/images/icon2.png" alt=""></noscript>
+            <span>Chat Messenger</span>
+        </a>
+
+        <a target="_blank" rel="nofollow" href="" class="zalo">
+            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                alt="" data-lazy-src="wp-content/themes/ws247/assets/images/icon3.png"><noscript><img
+                    src="wp-content/themes/ws247/assets/images/icon3.png" alt=""></noscript>
+            <span>Chat Zalo</span>
+        </a>
+    </div>
+
+    
+    <div class="box-search_header">
+        <label for="">Tìm Kiếm</label>
+        <form action="">
+            <input type="text" placeholder="Tìm Kiếm" name="s">
+            <button type="submit" class="btn-hd-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </form>
+    </div>
+    <div class="over-lay-mb"></div>
+
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+var videoId = 'SmsEPTgSBuE';
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '500',
+        width: '750',
+        videoId: videoId,
+        playerVars: { 'autoplay': 0, 'controls': 0, 'showinfo': 0, 'disablekb': 1, 'fs': 1, 'modestbranding': 1, 'enablejsapi': 1, 'rel': 0, 'loop': 0, 'modestbranding': 1, 'origin': 'https://www.youtube.com', 'playsinline': 0, 'title': 0 },
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING) {
+        console.log('playing');
+        document.getElementById('player').style.pointerEvents = 'none';
+    } else if (event.data == YT.PlayerState.PAUSED) {
+        console.log('pause');
+    } else if (event.data == YT.PlayerState.ENDED) {
+        console.log('end');
+    };
+}
+</script>
+
+
+
+    <!-- SCROLL -->
+    <!-- Google tag (gtag.js) -->
+    <script type="rocketlazyloadscript" async src="https://www.googletagmanager.com/gtag/js?id=G-WPGXT2W2SZ"></script>
+    <script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WPGXT2W2SZ');
+</script>
+    <script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript'
+        src='wp-content/cache/min/1/wp-content/plugins/auto-image-alt/js/auto_image_altb0cc.js?ver=1699065113'
+        id='auto_image_alt-js' defer></script>
+    <script type='text/javascript' id='kk-star-ratings-js-extra'>
+        /* <![CDATA[ */
+        var kk_star_ratings = { "action": "kk-star-ratings", "endpoint": "https:\/\/thuocme247.com\/wp-admin\/admin-ajax.php", "nonce": "f13aecfd78" };
+        /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'
+        src='wp-content/plugins/kk-star-ratings/src/core/public/js/kk-star-ratings.min23da.js?ver=5.4.8'
+        id='kk-star-ratings-js' defer></script>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'
+        src='wp-includes/js/dist/vendor/regenerator-runtime.minb36a.js?ver=0.13.7' id='regenerator-runtime-js'
+        defer></script>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'
+        src='wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0' id='wp-polyfill-js'></script>
+    <script type='text/javascript' id='contact-form-7-js-extra'>
+        /* <![CDATA[ */
+        var wpcf7 = { "api": { "root": "https:\/\/thuocme247.com\/wp-json\/", "namespace": "contact-form-7\/v1" }, "cached": "1" };
+        /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript'
+        src='wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/indexb0cc.js?ver=1699065113'
+        id='contact-form-7-js' defer></script>
+    <script type='text/javascript' id='toc-front-js-extra'>
+        /* <![CDATA[ */
+        var tocplus = { "visibility_show": "show", "visibility_hide": "hide", "width": "Auto" };
+        /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'
+        src='wp-content/plugins/table-of-contents-plus/front.mincab3.js?ver=2408' id='toc-front-js' defer></script>
+    <script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript'
+        src='wp-content/cache/min/1/wp-content/themes/ws247/assets/js/mainb0cc.js?ver=1699065113' id='ws247-jquery5-js'
+        defer></script>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'
+        src='wp-content/themes/ws247/assets/js/jquery.matchHeight-min1e7d.js?ver=9999' id='ws247-match-js'
+        defer></script>
+    <script type='text/javascript' id='wpfront-scroll-top-js-extra'>
+        /* <![CDATA[ */
+        var wpfront_scroll_top_data = { "data": { "css": "#wpfront-scroll-top-container{display:none;position:fixed;cursor:pointer;z-index:9999;opacity:0}#wpfront-scroll-top-container div.text-holder{padding:3px 10px;border-radius:3px;-webkit-border-radius:3px;-webkit-box-shadow:4px 4px 5px 0 rgba(50,50,50,.5);-moz-box-shadow:4px 4px 5px 0 rgba(50,50,50,.5);box-shadow:4px 4px 5px 0 rgba(50,50,50,.5)}#wpfront-scroll-top-container a{outline-style:none;box-shadow:none;text-decoration:none}#wpfront-scroll-top-container {right: 30px;bottom: 30px;}        #wpfront-scroll-top-container img {\n            width: auto;\n            height: auto;\n        }\n        ", "html": "<div id=\"wpfront-scroll-top-container\"><img src=\"https:\/\/thuocme247.com\/wp-content\/plugins\/wpfront-scroll-top\/images\/icons\/114.png\" alt=\"\" title=\"\" \/><\/div>", "data": { "hide_iframe": false, "button_fade_duration": 200, "auto_hide": false, "auto_hide_after": 2, "scroll_offset": 100, "button_opacity": 0.8, "button_action": "top", "button_action_element_selector": "", "button_action_container_selector": "html, body", "button_action_element_offset": "0", "scroll_duration": 400 } } };
+        /* ]]> */
+    </script>
+    <script type="rocketlazyloadscript" data-rocket-type='text/javascript'
+        src='wp-content/plugins/wpfront-scroll-top/js/wpfront-scroll-top.min93a9.js?ver=2.2.10081'
+        id='wpfront-scroll-top-js' defer></script>
+    <script type='text/javascript' src='wp-includes/js/wp-embed.min2b6f.js?ver=5.8.10' id='wp-embed-js' defer></script>
+    <script type="rocketlazyloadscript">
+        var zalo_acc = {"0988160155":"8dptlte22k0y"};
+
+        function devvnCheckLinkAvailability(link, successCallback, errorCallback) {
+            var hiddenIframe = document.querySelector("#hiddenIframe");
+
+            if (!hiddenIframe) {
+                hiddenIframe = document.createElement("iframe");
+                hiddenIframe.id = "hiddenIframe";
+                hiddenIframe.style.display = "none";
+                document.body.appendChild(hiddenIframe);
+            }
+
+            var timeout = setTimeout(function () {
+                errorCallback("Link is not supported.");
+                window.removeEventListener("blur", handleBlur);
+            }, 2500);
+
+            var result = {};
+
+            function handleMouseMove(event) {
+                if (!result.x) {
+                    result = {
+                        x: event.clientX,
+                        y: event.clientY,
+                    };
+                }
+            }
+
+            function handleBlur() {
+                clearTimeout(timeout);
+                window.addEventListener("mousemove", handleMouseMove);
+            }
+
+            window.addEventListener("blur", handleBlur);
+
+            window.addEventListener(
+                "focus",
+                function onFocus() {
+                    setTimeout(function () {
+                        if (document.hasFocus()) {
+                            successCallback(function (pos) {
+                                if (!pos.x) {
+                                    return true;
+                                }
+                                var screenWidth =
+                                    window.innerWidth ||
+                                    document.documentElement.clientWidth ||
+                                    document.body.clientWidth;
+                                var alertWidth = 300;
+                                var alertHeight = 100;
+                                var isXInRange =
+                                    pos.x - 100 < 0.5 * (screenWidth + alertWidth) &&
+                                    pos.x + 100 > 0.5 * (screenWidth + alertWidth);
+                                var isYInRange =
+                                    pos.y - 40 < alertHeight && pos.y + 40 > alertHeight;
+
+                                return isXInRange && isYInRange
+                                    ? "Link can be opened."
+                                    : "Link is not supported.";
+                            }(result));
+                        } else {
+                            successCallback("Link can be opened.");
+                        }
+                        window.removeEventListener("focus", onFocus);
+                        window.removeEventListener("blur", handleBlur);
+                        window.removeEventListener("mousemove", handleMouseMove);
+                    }, 500);
+                },
+                { once: true }
+            );
+
+            hiddenIframe.contentWindow.location.href = link;
+        }
+
+        function eachZalo(){
+            Object.keys(zalo_acc).map(function(sdt, index) {
+                let qrcode = zalo_acc[sdt];
+
+                const zaloLinks = document.querySelectorAll('a[href*="zalo.me/'+sdt+'"]');
+
+                zaloLinks.forEach((zalo) => {
+                    zalo.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        const userAgent = navigator.userAgent.toLowerCase();
+                        const isIOS = /iphone|ipad|ipod/.test(userAgent);
+                        const isAndroid = /android/.test(userAgent);
+
+                        let redirectURL = null;
+
+                        if (isIOS) {
+                            redirectURL = 'zalo://qr/p/'+qrcode;
+                            window.location.href = redirectURL;
+                        } else if (isAndroid) {
+                            redirectURL = 'zalo://zaloapp.com/qr/p/'+qrcode;
+                            window.location.href = redirectURL;
+                        } else {
+                            redirectURL = 'zalo://conversation?phone='+sdt;
+                            zalo.classList.add("zalo_loading");
+                            devvnCheckLinkAvailability(
+                                redirectURL,
+                                function (result) {
+                                    zalo.classList.remove("zalo_loading");
+                                },
+                                function (error) {
+                                    zalo.classList.remove("zalo_loading");
+                                    redirectURL = 'https://chat.zalo.me/?phone='+sdt;
+                                    window.location.href = redirectURL;
+                                }
+                            );
+                        }
+
+                    });
+                });
+            });
+        }
+
+        eachZalo();
+
+        
+        /*Thêm css vào site để lúc ấn trên pc trong lúc chờ check chuyển hướng sẽ không ấn vào thẻ a đó được nữa*/
+        var styleElement = document.createElement("style");
+        var cssCode = ".zalo_loading { pointer-events: none; }";
+        styleElement.innerHTML = cssCode;
+        document.head.appendChild(styleElement);
+    </script>
+    <script>window.lazyLoadOptions = { elements_selector: "img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]", data_src: "lazy-src", data_srcset: "lazy-srcset", data_sizes: "lazy-sizes", class_loading: "lazyloading", class_loaded: "lazyloaded", threshold: 300, callback_loaded: function (element) { if (element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible") { if (element.classList.contains("lazyloaded")) { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(element).parent().fitVids() } } } } } }; window.addEventListener('LazyLoad::Initialized', function (e) {
+            var lazyLoadInstance = e.detail.instance; if (window.MutationObserver) {
+                var observer = new MutationObserver(function (mutations) {
+                    var image_count = 0; var iframe_count = 0; var rocketlazy_count = 0; mutations.forEach(function (mutation) {
+                        for (i = 0; i < mutation.addedNodes.length; i++) {
+                            if (typeof mutation.addedNodes[i].getElementsByTagName !== 'function') { continue }
+                            if (typeof mutation.addedNodes[i].getElementsByClassName !== 'function') { continue }
+                            images = mutation.addedNodes[i].getElementsByTagName('img'); is_image = mutation.addedNodes[i].tagName == "IMG"; iframes = mutation.addedNodes[i].getElementsByTagName('iframe'); is_iframe = mutation.addedNodes[i].tagName == "IFRAME"; rocket_lazy = mutation.addedNodes[i].getElementsByClassName('rocket-lazyload'); image_count += images.length; iframe_count += iframes.length; rocketlazy_count += rocket_lazy.length; if (is_image) { image_count += 1 }
+                            if (is_iframe) { iframe_count += 1 }
+                        }
+                    }); if (image_count > 0 || iframe_count > 0 || rocketlazy_count > 0) { lazyLoadInstance.update() }
+                }); var b = document.getElementsByTagName("body")[0]; var config = { childList: !0, subtree: !0 }; observer.observe(b, config)
+            }
+        }, !1)</script>
+    <script data-no-minify="1" async
+        src="wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script>
+    <script>function lazyLoadThumb(e) { var t = '<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>', a = '<div class="play"></div>'; return t.replace("ID", e) + a } function lazyLoadYoutubeIframe() { var e = document.createElement("iframe"), t = "ID?autoplay=1"; t += 0 === this.dataset.query.length ? '' : '&' + this.dataset.query; e.setAttribute("src", t.replace("ID", this.dataset.src)), e.setAttribute("frameborder", "0"), e.setAttribute("allowfullscreen", "1"), e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"), this.parentNode.replaceChild(e, this) } document.addEventListener("DOMContentLoaded", function () { var e, t, a = document.getElementsByClassName("rll-youtube-player"); for (t = 0; t < a.length; t++)e = document.createElement("div"), e.setAttribute("data-id", a[t].dataset.id), e.setAttribute("data-query", a[t].dataset.query), e.setAttribute("data-src", a[t].dataset.src), e.innerHTML = lazyLoadThumb(a[t].dataset.id), e.onclick = lazyLoadYoutubeIframe, a[t].appendChild(e) });</script>
+</body>
+
+
+<!-- Mirrored from thuocme247.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Aug 2024 09:13:29 GMT -->
+
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1724636892 -->
